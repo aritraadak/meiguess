@@ -62,12 +62,12 @@ function startGame() {
     document.getElementById("feedbackForm").style.display = "block";
     document.getElementById("digitsMatched").value = "";
     document.getElementById("positionsMatched").value = "";
-    document.getElementById("note").innerText = "If the page seems busy, wait — the computer is thinking!";
+    document.getElementById("note").innerText = "aritraadak.07@gmail.com";
     // first guess: quick fixed guess to avoid heavy first computation
     // choose a reasonable first try that uses 4 distinct digits including 0
     guess = [0, 1, 2, 3];
     attempts = 1;
-    document.getElementById("guessDisplay").innerText = `My guess #${attempts}: ${formatNumber(guess)} (remaining: ${possibilities.length})`;
+    document.getElementById("guessDisplay").innerText = `My guess(${attempts}) : ${formatNumber(guess)}`;
 }
 
 function submitFeedback() {
@@ -125,7 +125,7 @@ function submitFeedback() {
         // If possibilities are small, compute exact minimax; otherwise sample for speed
         guess = getBestGuessAdaptive();
         attempts++;
-        display.innerText = `My guess #${attempts}: ${formatNumber(guess)} (remaining: ${possibilities.length})`;
+        display.innerText = `My guess(${attempts}) : ${formatNumber(guess)}`;
         document.getElementById("note").innerText = "";
     }, 50);
 }
@@ -192,4 +192,5 @@ function restartGame() {
     possibilities = allNumbers.slice();
     guess = null;
     attempts = 0;
+
 }
