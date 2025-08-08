@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guess The Number by Aritra & Swastika</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <h1 class="game-title">
+            Guess The Number<br />
+            <span>by Aritra &amp; Swastika</span>
+        </h1>
+
+        <div class="game-panel glass">
+            <div id="guessDisplay" class="guess-display"></div>
+
+            <button id="startBtn" class="btn">Start Game</button>
+
+            <div id="feedbackForm" style="display:none;">
+                <div class="input-group">
+                    <label for="digitsMatched">Digits Matched:</label>
+                    <input type="number" id="digitsMatched" min="0" max="4" autocomplete="off" />
+                </div>
+
+                <div class="input-group">
+                    <label for="positionsMatched">Positions Matched:</label>
+                    <input type="number" id="positionsMatched" min="0" max="4" autocomplete="off" />
+                </div>
+
+                <button id="submitBtn" class="btn">Submit Feedback</button>
+                <button id="restartBtn" class="btn secondary">Restart</button>
+            </div>
+
+            <p id="note" class="note"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
