@@ -67,7 +67,7 @@ function startGame() {
     // choose a reasonable first try that uses 4 distinct digits including 0
     guess = [0, 1, 2, 3];
     attempts = 1;
-    document.getElementById("guessDisplay").innerText = `My guess (${attempts}) : ${formatNumber(guess)}`;
+    document.getElementById("guessDisplay").innerText = `My guess (${attempts}) : ${formatNumber(guess)} | Remaining possibilities : ${possibilities.length}`;
 }
 
 function submitFeedback() {
@@ -117,7 +117,7 @@ function submitFeedback() {
 
     // Let the UI show the "thinking" text, then compute the best guess (non-blocking)
     const display = document.getElementById("guessDisplay");
-    display.innerText = `Thinking... remaining possibilities: ${possibilities.length}`;
+    display.innerText = `Thinking...`;                                                    //remaining possibilities: ${possibilities.length}
     document.getElementById("note").innerText = "Computing optimal guess (may take a moment)...";
 
     // compute in next tick so browser can repaint
@@ -125,7 +125,7 @@ function submitFeedback() {
         // If possibilities are small, compute exact minimax; otherwise sample for speed
         guess = getBestGuessAdaptive();
         attempts++;
-        display.innerText = `My guess (${attempts}) : ${formatNumber(guess)}`;
+        display.innerText = `My guess (${attempts}) : ${formatNumber(guess)} | Remaining possibilities : ${possibilities.length}`;
         document.getElementById("note").innerText = "";
     }, 50);
 }
@@ -194,5 +194,6 @@ function restartGame() {
     attempts = 0;
 
 }
+
 
 
