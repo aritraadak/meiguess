@@ -62,7 +62,7 @@ function startGame() {
     document.getElementById("feedbackForm").style.display = "block";
     document.getElementById("digitsMatched").value = "";
     document.getElementById("positionsMatched").value = "";
-    document.getElementById("note").innerText = "aritraadak.07@gmail.com";
+    document.getElementById("note").innerText = "Rules - Choose a 4 digit number , digits should be 0 to 9 and unique , I will guess it .";
     // first guess: quick fixed guess to avoid heavy first computation
     // choose a reasonable first try that uses 4 distinct digits including 0
     guess = [0, 1, 2, 3];
@@ -194,4 +194,5 @@ function restartGame() {
     attempts = 0;
 
 }
+
 
