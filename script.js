@@ -67,7 +67,8 @@ function startGame() {
     // choose a reasonable first try that uses 4 distinct digits including 0
     guess = [0, 1, 2, 3];
     attempts = 1;
-    document.getElementById("guessDisplay").innerText = `My guess (${attempts}) : ${formatNumber(guess)} | Remaining possibilities : ${possibilities.length}`;
+    document.getElementById("guessDisplay").innerText = `My guess (${attempts}) : ${formatNumber(guess)}
+    Remaining possibilities : ${possibilities.length}`;
 }
 
 function submitFeedback() {
@@ -125,7 +126,8 @@ function submitFeedback() {
         // If possibilities are small, compute exact minimax; otherwise sample for speed
         guess = getBestGuessAdaptive();
         attempts++;
-        display.innerText = `My guess (${attempts}) : ${formatNumber(guess)} | Remaining possibilities : ${possibilities.length}`;
+        display.innerText = `My guess (${attempts}) : ${formatNumber(guess)}
+        Remaining possibilities : ${possibilities.length}`;
         document.getElementById("note").innerText = "";
     }, 50);
 }
@@ -194,6 +196,7 @@ function restartGame() {
     attempts = 0;
 
 }
+
 
 
 
